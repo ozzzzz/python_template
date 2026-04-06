@@ -119,7 +119,7 @@ def main() -> None:
 
     if args.dry_run:
         for old, new in replacements:
-            hits = replace_in_tree(ROOT, old, new) if False else []  # skip actual changes
+            replace_in_tree(ROOT, old, new) if False else []  # skip actual changes
             print(f"[dry-run] Would replace: {old!r} → {new!r}")
         print("\nRun without --dry-run to apply changes.")
         return
